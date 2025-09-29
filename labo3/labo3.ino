@@ -50,7 +50,7 @@ void loop() {
     int lectura = analogRead(pinLM35);              // 0..1023
     const float Vref = 5.0;                         // ajustar si tu referencia ADC es distinta
     float voltaje = lectura * (Vref / 1023.0);      // voltaje en V
-    float tempC = voltaje * 100.0;                  // LM35: 10 mV/°C -> factor 100
+    float tempC = voltaje * 100.0;                  // LM35: 10 mV/°C -> factor 100x`
 
     // Imprime en formato legible
     Serial.print("Temperatura: ");
